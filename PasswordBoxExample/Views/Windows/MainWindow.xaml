@@ -6,20 +6,23 @@
         xmlns:local="clr-namespace:PasswordBoxExample"
         xmlns:dc="clr-namespace:PasswordBoxExample.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="100" Width="450">
     <Window.DataContext>
         <dc:MainWindowViewModel/>
     </Window.DataContext>
     <DockPanel Margin="3">
         <DockPanel DockPanel.Dock="Top">
+            <DockPanel DockPanel.Dock="Left">
             <PasswordBox x:Name ="PwdEntry"
-                         Width="50"/>
+                         Width="300"
+                         Height="20"/>
             <Button Content="Check Length" 
-                    Width="150"
-                    Height="50"
+                    Width="100"
+                    Height="30"
                     Command="{Binding CheckLengthCommand}"
                     CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
                     AncestorType={x:Type Window}}}"/>
+            </DockPanel>
         </DockPanel>
     </DockPanel>
 </Window>
