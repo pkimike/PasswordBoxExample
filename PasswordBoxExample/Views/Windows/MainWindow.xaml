@@ -19,7 +19,7 @@
             <Button Content="Check Length" 
                     Width="100"
                     Height="30"
-                    Command="{Binding CheckLengthCommand}"
+                    Command="{Binding CheckPasswordLengthCommand}"
                     CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
                     AncestorType={x:Type Window}}}"/>
             </DockPanel>

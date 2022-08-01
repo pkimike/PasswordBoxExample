@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
-using SysadminsLV.WPF.OfficeTheme.Toolkit.Commands;
 
 namespace PasswordBoxExample.ViewModels {
     class MainWindowViewModel {
         public MainWindowViewModel() {
-            CheckLengthCommand = new RelayCommand(checkLength);
+            CheckPasswordLengthCommand = new RelayCommand(checkPasswordLength);
         }
-        public ICommand CheckLengthCommand { get;}
+        public ICommand CheckPasswordLengthCommand { get;}
 
-        void checkLength(Object o) {
-            var encryptedPassword = (o as IPasswordContainer)?.Password;
-            MessageBox.Show($"Password Length: {encryptedPassword?.Length ?? 0}");
+        void checkPasswordLength(Object o) {
+            var securePassword = (o as IPasswordContainer)?.Password;
+            MessageBox.Show($"Password Length: {securePassword?.Length ?? 0}");
         }
     }
 }

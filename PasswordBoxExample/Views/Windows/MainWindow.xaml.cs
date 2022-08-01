@@ -10,8 +10,6 @@ namespace PasswordBoxExample.Views.Windows {
             InitializeComponent();
         }
 
-        public SecureString Password {
-            get => PwdEntry.SecurePassword;
-        }
+        public SecureString Password => PwdEntry.SecurePassword;
     }
 }
