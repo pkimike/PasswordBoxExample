@@ -11,5 +11,9 @@ namespace PasswordBoxExample.Views.Windows {
         }
 
         public SecureString Password => PwdEntry.SecurePassword;
+
+        public void Dispose() {
+            Password.Dispose();
+        }
     }
 }

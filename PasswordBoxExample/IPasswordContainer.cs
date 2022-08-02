@@ -1,7 +1,8 @@
-﻿using System.Security;
+﻿using System;
+using System.Security;
 
 namespace PasswordBoxExample {
-    interface IPasswordContainer {
+    interface IPasswordContainer : IDisposable {
         public SecureString Password { get;}
     }
 }
